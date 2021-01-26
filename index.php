@@ -5,9 +5,9 @@ ini_set("display_errors", 1);
 
 require_once 'config/database.php';
 //front controller
- $tab = [
+ $menu = [
     '404' => 'ressources/views/errors/404.php',
-     'frontController' => 'app/controllers/homeController.php',
+     'home' => 'app/controllers/homeController.php',
  ];
 
  if (filter_has_var(INPUT_GET,'action')) {
@@ -18,5 +18,5 @@ require_once 'config/database.php';
 } else {
      $action = 'home'; // sinon page home
 }
-$fichier = $tab [$action];
+$fichier = $menu [$action];
  include $fichier;
