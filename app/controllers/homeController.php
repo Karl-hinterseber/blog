@@ -1,10 +1,11 @@
 <?php
-echo 'Hello world';
-
+//appel de la BDD
 require 'app/persistences/blogPostData.php';
 
-$tenLastPosts = lastBlogPosts($dbh);
-var_dump($tenLastPosts);
-//foreach ($tenLastPosts as $row) {
-//echo "<li>".$row['posts']." - ".$row['authors']."</li>";
-//}
+//Variable qui ets égale au résultat de la fonction qui fait la requête SQL
+$AllLastPost = BlogPosts($dbh);
+
+//Affichage de la vue par le template
+include 'ressources/views/home.tpl.php';
+
+
