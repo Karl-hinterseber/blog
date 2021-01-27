@@ -8,6 +8,7 @@ require_once 'config/database.php';
  $menu = [
     '404' => 'ressources/views/errors/404.php',
      'home' => 'app/controllers/homeController.php',
+     //'home' => 'app/controllers/blogPostController.php'
  ];
 
  if (filter_has_var(INPUT_GET,'action')) {
