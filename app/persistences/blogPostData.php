@@ -38,3 +38,4 @@ WHERE comments.posts_id=$clicpost");
     $result = $commentposts->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
 }
+
