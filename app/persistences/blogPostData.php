@@ -38,4 +38,11 @@ WHERE comments.posts_id=$clicpost");
     $result = $commentposts->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
 }
+function blogPostCreate(PDO $coucou, $ap)
+{
+    $q = "INSERT INTO posts ( authors_id, titre_article, text_article, publication_debut, publication_fin)
+VALUES ( $ap[0], '$ap[1]', '$ap[2]', '$ap[3]', '$ap[4]')";
+    $sth = $coucou->query($q);
+;
+}
 
