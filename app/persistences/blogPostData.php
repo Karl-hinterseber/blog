@@ -12,7 +12,7 @@ LIMIT 10');
 */
 function blogPosts(PDO $connectBDD)
 {
-    $miseentabtotal = $connectBDD->prepare('SELECT authors.nom, posts.titre_article, posts.text_article  FROM posts
+    $miseentabtotal = $connectBDD->prepare('SELECT posts.id, authors.nom, posts.titre_article, posts.text_article  FROM posts
 INNER JOIN authors ON authors.id = posts.authors_id
 ORDER BY posts.id DESC');
     $miseentabtotal->execute();
